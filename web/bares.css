@@ -1,0 +1,21 @@
+.datos{
+  border: 1px solid;
+}
+
+.general img{
+  width: 100px;
+  height: 150px;
+}
+
+td.temaBar{
+  border: 1px solid;
+}
+
+td.puntuacionBar{
+  float: right;
+}
+
+td.localizacionBar img{
+  height: 25px;
+  width: 21px;
+}
