@@ -12,7 +12,7 @@
   switch($verb){
     case 'GET':
       if($_GET['id_CERVEZA'] != null){
-        $resultado = mysqli_query($connection, "SELECT * FROM CERVEZA WHERE id_CERVEZA = '" . $_GET['id']."'") or die('Could not query: ' . mysqli_error($connection));
+        $resultado = mysqli_query($connection, "SELECT * FROM CERVEZA WHERE id_CERVEZA = '" . $_GET['id_CERVEZA']."'") or die('Could not query: ' . mysqli_error($connection));
         print json_encode(array(mysqli_fetch_assoc($resultado)));
       }else{
         $resultado = mysqli_query($connection, "SELECT * FROM CERVEZA") or die('Could not query: ' . mysqli_error($connection));

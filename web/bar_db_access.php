@@ -14,7 +14,7 @@
   switch($verb){
     case 'GET':
       if($_GET['id_BAR'] != null){
-        $resultado = mysqli_query($connection, "SELECT * FROM BAR WHERE id_BAR = '" . $_GET['id']."'") or die('Could not query: ' . mysqli_error($connection));
+        $resultado = mysqli_query($connection, "SELECT * FROM BAR WHERE id_BAR = '" . $_GET['id_BAR']."'") or die('Could not query: ' . mysqli_error($connection));
         print json_encode(array(mysqli_fetch_assoc($resultado)));
       }else{
         $resultado = mysqli_query($connection, "SELECT * FROM BAR;") or die('Could not query: ' . mysqli_error($connection));
