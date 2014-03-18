@@ -1,0 +1,29 @@
+body{
+  width: 50%;
+  background-color: black;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+#titulo{
+  background-color: black;
+}
+
+#titulo h1{
+  text-align: center;
+  float: left;
+  padding-top: 10%;
+  padding-left: 10%
+}
+
+#login{
+  text-align: left;
+  margin: auto;
+  width: 25%
+}
+
+#enviar{
+  width: 330%;
+}
+
