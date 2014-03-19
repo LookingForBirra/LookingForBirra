@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#prueba{
+	background-color:#3F0;
+}
+
+
+
+#cabecera{
+	background-color:#390;
+	width:100%;
+}
+
+#cuerpo{
+	background-color:#C90;
+}
+
+#pie{
+	background-color:#390;
+}
