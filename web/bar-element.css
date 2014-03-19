@@ -1,0 +1,40 @@
+.barWrapper{
+  width: 50%;
+  margin: auto;
+}
+
+.bar{
+  color: white;
+  background-color: black;
+}
+
+.col-md-2{
+  text-align:center;
+}
+
+.nombreBar{
+  padding-top: 10px;
+}
+
+.puntuacionBar{
+  font-size: 2em;
+}
+
+.imagencita{
+  padding-top:25px;
+  text-align:center;
+}
+
+.enlaceBar:hover{
+  background-color: gray;
+}
+
+.imagencita img{
+  height: 25px;
+  width: 25px;  
+}
+
+img.barInteractivo{
+  height: 50px;
+  width: 50px;
+}
