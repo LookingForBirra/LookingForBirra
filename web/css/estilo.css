@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#prueba{
+	background-color:#3F0;
+}
+
+
+#cabecera{
+	background-color:#390;
+	width:100%;
+	border-bottom:2px solid #360;
+}
+
+#cuerpo{
+	background-color:#C90;
+	padding:10px;
+}
+
+#pie{
+	background-color:#C90;
+	border-top:1px solid #390;
+	font-size:12px;
+}
+
+#ofertas{
+	height:200px;
+	background-color:#FFC;
+	padding:25px;
+	margin:10px;
+	
+}
+
+#noticias{
+	background-color:#FFC;
+	text-align:justify;
+	padding:25px;
+	margin:10px;
+}
+
+#usuario{
+	color:#FFF;
+}
+
+/* REDEFINICIÓN DE CLASES */
+.container{
+	max-width:800px;
+}
+
+a{
+	color:#FC0;
+}
+
+img{
+	height:20%;
+	width:20%;
+	float:left;
+	margin:5px;
+}
