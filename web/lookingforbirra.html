@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app>
   <head>
     <meta charset="utf-8">
     <title>LookingForBirra</title>
     <link rel="stylesheet" href="lookingforbirra.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" content="text/css" href="bar-element.css">
+    <link rel="stylesheet" content="text/css" href="css/bootstrap.css">
   </head>
   <body>
-    <h1>LookingForBirra</h1>
     
-    <p>Hello world from Dart!</p>
-    
-    <div id="sample_container_id">
-      <p id="sample_text_id">Click me!</p>
+    <ul bar-list ng-cloak>
+      <li ng-repeat="bar in ctrl.barList">
+      <div class="barWrapper">
+     <div class="bar">
+        <div class="row">
+          <div class="col-md-8 nombreBar">{{bar.name}}</div>
+          <div class="col-md-1 puntuacionBar">69</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">{{bar.address}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">{{bar.tipoAsString}}</div>
+          <div class="col-md-3">{{bar.tematica}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 imagencita">
+            <div class="enlaceBar"><img src="images/mapPin.png"><br>Mapa</div>
+          </div>            
+          <div class="col-md-2 imagencita">           
+            <div class="enlaceBar"><img src="images/fav.png"><br>Fav</div>
+          </div>
+          <div class="col-md-2 imagencita">                
+            <div class="enlaceBar"><img src="images/info_black.png"><br>Info</div>
+          </div>   
+          <div class="col-md-2 col-md-offset-2"><img src="images/birra_fondo_negro.gif" class="barInteractivo"><br>0 amigos</div>
+          <div class="col-md-2"><img src="images/birra_fondo_negro.gif" class="barInteractivo"><br>Vacío</div>
+        
+        </div>
+      </div>
     </div>
-    
-  <div bar>
-    <h3>Bar photo</h3>
-    <div>PhotoUrl : {{ctrl.currentBar.imgURL}}</div>
+      </li>
+    </ul>
+    <div bar>
+      <h3>Bar photo</h3>
+      <div>PhotoUrl : {{ctrl.currentBar.imgURL}}</div>
   
-    <h3>Bar details</h3>
-    <div>Name: {{ctrl.currentBar.name}}</div>
-    <div>Direccion: {{ctrl.currentBar.address}}</div>
-    <div>Rating: {{ctrl.currentBar.zona}}</div>
-  </div>
+      <h3>Bar details</h3>
+      <div>Name: {{ctrl.barName}}</div>
+      <div>Direccion: {{ctrl.currentBar.address}}</div>
+      <div>Rating: {{ctrl.currentBar.zona}}</div>
+    </div>
 
+    <script src="packages/shadow_dom/shadow_dom.min.js"></script>
     <script type="application/dart" src="lookingforbirra.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>

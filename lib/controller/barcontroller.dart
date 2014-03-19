@@ -29,13 +29,13 @@ class BarListController {
   List<Bar> barList;
   Http _http;
   
-  BarListController() {
+  BarListController(Http this._http) {
     _loadData();
   }
   
   void _loadData() {
     barList = new List<Bar>();
-    var url = 'lookingforbirra.esy.es/bar_db_acces.php';
+    var url = 'http://lookingforbirra.esy.es/bar_db_access.php';
     _http.get(url).then((HttpResponse response){
       print(response);
       for(Map m in response.data){

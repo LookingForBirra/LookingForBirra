@@ -1,6 +1,7 @@
 <?php
+  include 'database_connection.php';
 
-  
+  header('Access-Control-Allow-Origin: *');   
   $connection = connect();
 
   if(! $connection ){
@@ -15,13 +16,13 @@
     case 'GET':
       if($_GET['id_BAR'] != null){
         $resultado = mysqli_query($connection, "SELECT * FROM BAR WHERE id_BAR = '" . $_GET['id_BAR']."'") or die('Could not query: ' . mysqli_error($connection));
-        print json_encode(array(mysqli_fetch_assoc($resultado)));
+        print json_encode(mysqli_fetch_assoc($resultado));
       }else{
         $resultado = mysqli_query($connection, "SELECT * FROM BAR;") or die('Could not query: ' . mysqli_error($connection));
         while($r = mysqli_fetch_assoc($resultado)) {
           $rows[] = $r;
         }
-        print json_encode(array("result" => $rows));
+        print json_encode($rows);
       }
       
       break;
