@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" content="text/css" href="bar-element.css">
-    <link rel="stylesheet" content="text/css" href="css/bootstrap.css">
-    <title>bares</title>
-  </head>
- 
-  <body> 
-    <div class="barWrapper">
-     <div class="bar">
-        <div class="row">
-          <div class="col-md-8 nombreBar">Nombre</div>
-          <div class="col-md-1 puntuacionBar">69</div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">Dirección completa</div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">Tipo</div>
-          <div class="col-md-3">Temática</div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 imagencita">
-            <div class="enlaceBar"><img src="images/mapPin.png"><br>Mapa</div>
-          </div>            
-          <div class="col-md-2 imagencita">           
-            <div class="enlaceBar"><img src="images/fav.png"><br>Fav</div>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" content="text/css" href="bar-element.css">
+<link rel="stylesheet" content="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" content="text/css" href="css/estilo.css">
+<title>bares</title>
+</head>
+
+<body>
+
+  <div class="barWrapper">
+    <table>
+      <tr>
+        <td>
+          <div class="foto">
+            <img src="images/birra_fondo_transparente.gif" class="foto"
+              alt="">
           </div>
-          <div class="col-md-2 imagencita">                
-            <div class="enlaceBar"><img src="images/info_black.png"><br>Info</div>
-          </div>   
-          <div class="col-md-2 col-md-offset-2"><img src="images/birra_fondo_negro.gif" class="barInteractivo"><br>0 amigos</div>
-          <div class="col-md-2"><img src="images/birra_fondo_negro.gif" class="barInteractivo"><br>Vacío</div>
-        
-        </div>
-      </div>
-    </div>
-        
-    
-  </body>
+        </td>
+        <td>
+          <div class="bar">
+            <div class="row">
+              <div class="col-md-10 nombreBar">Nombre</div>
+              <div class="col-md-2 puntuacionBar">69</div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">Dirección completa</div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">Tipo</div>
+              <div class="col-md-3">Temática</div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 imagencita">
+                <div class="enlaceBar">
+                  <img src="images/mapPin.png" alt=""><br>
+                  Mapa
+                </div>
+              </div>
+              <div class="col-md-2 imagencita">
+                <div class="enlaceBar">
+                  <img src="images/fav.png" alt=""><br>
+                  Fav
+                </div>
+              </div>
+              <div class="col-md-2 imagencita">
+                <div class="enlaceBar">
+                  <img src="images/info_black.png" alt=""><br>
+                  Info
+                </div>
+              </div>
+              <div class="col-md-3 col-md-offset-0">
+                <img src="images/birra_fondo_negro.gif"
+                  class="barInteractivo" alt="">
+                <div class="subtituloBar">0 amigos</div>
+              </div>
+              <div class="col-md-3">
+                <img src="images/birra_fondo_negro.gif"
+                  class="barInteractivo" alt="">
+                <div class="subtituloBar">Mucha gente</div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
 </html>

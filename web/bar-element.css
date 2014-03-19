@@ -1,15 +1,21 @@
 .barWrapper{
-  width: 50%;
+    width: 650px;
+	background-color:#FFC;
+}
+
+.bar{  
+	width: 500px;
+	padding-left: 10px;
+}
+
+div.foto{  
+  background-color: black;
   margin: auto;
 }
 
-.bar{
-  color: white;
-  background-color: black;
-}
-
-.col-md-2{
-  text-align:center;
+img.foto{
+  height: 150px;
+  width: 150px;
 }
 
 .nombreBar{
@@ -20,18 +26,25 @@
   font-size: 2em;
 }
 
-.imagencita{
-  padding-top:25px;
-  text-align:center;
-}
-
-.enlaceBar:hover{
-  background-color: gray;
-}
 
 .imagencita img{
   height: 25px;
   width: 25px;  
+  margin-left: 17px;
+}
+
+.enlaceBar{
+  text-align: center;
+  margin-top: 25px;
+}
+
+.enlaceBar:hover{
+  background-color: #390;
+}
+
+.subtituloBar{
+  float: left;
+  text-align: center;
 }
 
 img.barInteractivo{
