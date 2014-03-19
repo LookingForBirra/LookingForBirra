@@ -6,7 +6,6 @@
 }
 
 
-
 #cabecera{
 	background-color:#390;
 	width:100%;
@@ -14,8 +13,24 @@
 
 #cuerpo{
 	background-color:#C90;
+	padding:10px;
 }
 
 #pie{
 	background-color:#390;
+}
+
+#ofertas{
+	height:200px;
+}
+
+#noticias{
+	background-color:#FFC;
+	text-align:justify;
+	padding:25px;
+}
+
+/* REDEFINICIÓN DE CLASES */
+.container{
+	max-width:800px;
 }
