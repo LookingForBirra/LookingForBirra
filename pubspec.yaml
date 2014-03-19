@@ -4,3 +4,4 @@ dependencies:
   browser: any
   http_server: any
   polymer: any
+  angular: any
