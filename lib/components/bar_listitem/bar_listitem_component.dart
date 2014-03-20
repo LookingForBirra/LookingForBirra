@@ -10,7 +10,7 @@ import 'package:angular/angular.dart';
     applyAuthorStyles: true
 )
 class BarListItemComponent{
-  @NgAttr('barName')
+  @NgAttr('barname')
   String barName;
   
   @NgAttr('baraddress')
