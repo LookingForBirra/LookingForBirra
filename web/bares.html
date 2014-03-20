@@ -1,13 +1,20 @@
-   
-    <form class="navbar-form busquedaBares" action="#/bares" method="get">
+ <div bar-list>
+   <div class="navbar-form busquedaBares">
       <div class="form-group">
-        <input type="text" class="form-control" name="valorBusqueda" placeholder="Introduzca su búsqueda">
-        <select class="form-control" name="tipoBusqueda">
+        <input type="text" class="form-control" name="valorBusqueda" placeholder="Introduzca su búsqueda" ng-model="ctrl.searchValor">
+        <select class="form-control" name="tipoBusqueda" ng-model="ctrl.searchTipo">
           <option value="Nombre">Nombre</option>
           <option value="Tipo">Tipo</option>
           <option value="Tematica">Temática</option>
           <option value="Zona">Zona</option>
         </select>
-        <button type="submit" class="btn btn-default">Buscar</button>
+        <button class="btn btn-default" ng-click="ctrl.search()">Buscar</button>
       </div>
-    </form>
+    </div>
+    <ul ng-cloak>
+      <li ng-repeat="abar in ctrl.barList">
+        <barlistitem barName="{{abar.name}}" barAddress="{{abar.address}}" barTipo="{{abar.tipo}}" barTematica="{{abar.tematica}}"></barlistitem>
+      </li>
+    </ul>
+ </div>
+    
