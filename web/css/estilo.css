@@ -1,3 +1,11 @@
+html, body{
+  height: 100%;
+}
+
+body{
+  background-color:#C90;
+}
+
 @charset "UTF-8";
 /* CSS Document */
 
@@ -12,15 +20,16 @@
 	border-bottom:2px solid #360;
 }
 
-#cuerpo{
+#cuerpo, .cuerpo{
 	background-color:#C90;
 	padding:10px;
 }
 
 #pie{
 	background-color:#C90;
-	border-top:1px solid #390;
 	font-size:12px;
+	height: 4em;
+	text-align: center;
 }
 
 #ofertas{
@@ -66,9 +75,8 @@ a{
 }
 
 .busquedaBares{
-  height: 500px;
   padding-top: 50px;
-  margin: auto;
+  padding-left: 50px;
 }
 
 .botonesUsuario{
@@ -78,6 +86,27 @@ a{
 .nombreUsuario{  
   margin-left: -10px;
 }
+
+.resultadoBar{
+  list-style: none;
+  margin-top: 10px;
+}
+
+.wrapper {
+  background-color:#C90;
+  min-height: 100%;
+  height: 100%;
+  margin: 0 auto -60px;
+}
+
+.push{
+  height: 4em;
+}
+
+.inputBares{
+  width: 500px;
+}
+
 
 /*div, li, img{
   border: 1px solid;
