@@ -64,3 +64,9 @@ a{
 	float:left;
 	margin:5px;
 }
+
+.busquedaBares{
+  height: 500px;
+  padding-top: 50px;
+  margin: auto;
+}
