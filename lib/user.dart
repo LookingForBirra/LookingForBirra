@@ -19,6 +19,10 @@ class User{
     'puntos' : puntos
   };
   
+  String toString(){
+    return "HOLA " + id_USER.toString() + " " + nombre;
+  }
+  
   User.fromJson(Map<String, dynamic> json) : this(int.parse(json['id_USER']), json['nombre'],
       json['apellido1'], json['apellido2'], json['ciudad'], int.parse(json['puntos']));
   

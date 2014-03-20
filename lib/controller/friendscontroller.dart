@@ -13,25 +13,24 @@ class FriendsController {
   bool friendChosen;
   Http _http;
   
-  static String _databaseUrl = 'http://lookingforbirra.esy.es/friends_db_access.php';
+  static String _databaseUrl = 'http://lookingforbirra.esy.es/bar_db_access.php';
   
-  FriendsController(Http this._http);
+  FriendsController(Http this._http){
+    friendChosen = false;
+    _loadData();
+  }
   
-  void loadData() {
-    /*
-    userList = new List<User>();
+  void _loadData() {
+    friendsList = new List<User>();
     _http.get(_databaseUrl).then((HttpResponse response){
-      print(response);
-      for(Map m in response.data){
-        userList.add(new User.fromJson(m));
-      }
-    });*/
-    friendsList = <User>[new User(1, "Manuel", "Martin", "Muñoz", "Granada", 100),
-                      new User(2, "Jose", "Jimenez", "Jeronimo", "Granada", 200),
-                      new User(3, "Alvaro", "Anguita", "Aragon", "Malaga", 150)];
+      friendsList.add(new User(1, "Manuel", "Martin", "Muñoz", "Granada", 100));
+      friendsList.add(new User(2, "Jose", "Jimenez", "Jeronimo", "Granada", 200));
+      friendsList.add(new User(3, "Alvaro", "Anguita", "Aragon", "Malaga", 150));
+    });
   }
   
   void changeView(int id){
+    print('Friend Chosen');
     var chosenFriendElement = querySelector('#chosenFriend');
     User userChosen;
     for(User friend in friendsList){

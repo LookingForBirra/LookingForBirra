@@ -1,6 +1,8 @@
 import 'package:angular/angular.dart';
 import 'package:LookingForBirra/controller/barcontroller.dart';
 import 'package:LookingForBirra/components/bar_listitem/bar_listitem_component.dart';
+import 'package:LookingForBirra/components/user_listitem/user_listitem_component.dart';
+import 'package:LookingForBirra/controller/friendscontroller.dart';
 import 'dart:html';
 
 @NgDirective(
@@ -52,7 +54,11 @@ class AppRouteInitializer implements RouteInitializer{
       ..addRoute(
         name:'noticias',
         path: '/noticias',
-        enter: view('noticias.html'));
+        enter: view('noticias.html'))
+      ..addRoute(
+        name: 'amigos',
+        path: '/amigos',
+        enter: view('friends.html'));
     
     }
 }
@@ -61,6 +67,8 @@ main() {
   ngBootstrap(module: new AngularModule()
     ..type(CurrentRoute)
     ..type(BarListController)
+    ..type(FriendsController)
+    ..type(UserListItemComponent)
     ..type(BarListItemComponent)
     ..type(RouteInitializer, implementedBy: AppRouteInitializer)
     ..factory(NgRoutingUsePushState, (_) => new NgRoutingUsePushState.value(false))
