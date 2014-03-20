@@ -1,0 +1,17 @@
+<div friend-list ng-cloak>
+  <div ng-hide="ctrlF.friendChosen">
+    <ul>
+      <li ng-repeat="user in ctrlF.friendsList">
+        <userlistitem idUser="user.id_USER" onInviteClick="ctrlF.changeView" userName="user.nombre" userApellido1="user.apellido1" userApellido2="user.apellido2" userCiudad="user.ciudad" userPuntos="user.puntos">
+      </li>
+    </ul>
+  </div>
+  <div ng-show="ctrlF.friendChosen">
+    <userlistitem id="chosenFriend">
+    <ul bar-list>
+      <li ng-repeat="abar in ctrl.barList">
+        <barlistitem barName="{{abar.name}}" barAddress="{{abar.address}}" barTipo="{{abar.tipo}}" barTematica="{{abar.tematica}}"></barlistitem>
+      </li>
+    </ul>
+  </div>
+</div>

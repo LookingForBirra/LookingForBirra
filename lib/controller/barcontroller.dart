@@ -1,5 +1,5 @@
-import 'dart:html';
-import 'dart:convert';
+library barcontroller;
+
 import 'package:angular/angular.dart';
 import 'package:LookingForBirra/bar.dart';
 
@@ -21,7 +21,6 @@ class BarListController {
   
   void search(){
     barList = new List<Bar>();
-    print("XXXXXXXXXXXXXXXXXXXXXXX");
     String url = 'http://lookingforbirra.esy.es/bar_db_access.php';
     Map args = { 'tipoBusqueda' : searchTipo,
                  'valorBusqueda' : searchValor};

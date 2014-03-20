@@ -1,30 +1,39 @@
 library user_listitem_component;
 
-import 'package:LookingForBirra/user.dart';
 import 'package:angular/angular.dart';
 
 @NgComponent(
-    selector : 'user',
+    selector : 'userlistitem',
     templateUrl : '../lib/components/user/user_component.html',
     cssUrl: '../lib/components/user/user_component.css',
     publishAs: 'cmpU',
     applyAuthorStyles: true)
-class UserListComponent{
-  List<User> listUsers;
-  Http _http;
-  
-  UserListComponent(Http this._http);
-  
+class UserListItemComponent{
   @NgAttr('idUser')
-  set idUser(int id){
-    _loadData(id);
-  }
+  int idUser;
   
-  void _loadData(int id){
-    //TODO sacarlo del backend en lugar de esto
-    listUsers = <User> [new User(id, "Jose", "Plata", "Muñoz", "Graná", 100),
-                        new User(id, "Jose", "Plata", "Muñoz", "Graná", 100),
-                        new User(id, "Jose", "Plata", "Muñoz", "Graná", 100)];
+  @NgAttr('userName')
+  String userName;
+  
+  @NgAttr('userApellido1')
+  String userApellido1;
+  
+  @NgAttr('userApellido2')
+  String userApellido2;
+  
+  @NgAttr('userCiudad')
+  String userCiudad;
+  
+  @NgAttr('userPuntos')
+  int userPuntos;
+  
+  @NgCallback('onInviteClick')
+  Function onInviteClickFunction;
+  
+  UserListItemComponent();
+  
+  void invite(){
+    Function.apply(onInviteClickFunction, [idUser]);
   }
 }
     
