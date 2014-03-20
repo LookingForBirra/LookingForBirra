@@ -5,9 +5,10 @@ import 'package:angular/angular.dart';
 
 @NgComponent(
     selector: 'bar',
-    templateUrl: 'components/bar/bar_component.html',
-    cssUrl: 'components/bar/bar_component.css',
-    publishAs: 'cmpB')
+    templateUrl: '../lib/components/bar/bar_component.html',
+    cssUrl: '../lib/components/bar/bar_component.css',
+    publishAs: 'cmpB',
+    applyAuthorStyles: true)
 class BarComponent {
   Bar currentBar;
   Http _http;
@@ -22,7 +23,7 @@ class BarComponent {
 
   void _loadBar(int id) {
     var url = 'http://lookingforbirra.esy.es/bar_db_access.php';
-    _http.get(url).then((HttpResponse response){
+    _http.get(url, params : <String,dynamic>{'id_BAR': id}).then((HttpResponse response){
       print(response);
       currentBar = new Bar.fromJson(response.data);
     });
