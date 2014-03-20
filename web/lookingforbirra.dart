@@ -1,10 +1,11 @@
 import 'package:angular/angular.dart';
-import '../lib/controller/barcontroller.dart';
+import 'package:LookingForBirra/controller/barcontroller.dart';
+import 'package:LookingForBirra/components/bar_listitem/bar_listitem_component.dart';
 
 class MyAppModule extends Module {
   MyAppModule() {
-    type(BarController);
     type(BarListController);
+    type(BarListItemComponent);
   }
 }
 

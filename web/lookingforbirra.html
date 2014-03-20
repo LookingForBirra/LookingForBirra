@@ -12,47 +12,10 @@
   <body>
     
     <ul bar-list ng-cloak>
-      <li ng-repeat="bar in ctrl.barList">
-      <div class="barWrapper">
-     <div class="bar">
-        <div class="row">
-          <div class="col-md-8 nombreBar">{{bar.name}}</div>
-          <div class="col-md-1 puntuacionBar">69</div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">{{bar.address}}</div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">{{bar.tipoAsString}}</div>
-          <div class="col-md-3">{{bar.tematica}}</div>
-        </div>
-        <div class="row">
-          <div class="col-md-2 imagencita">
-            <div class="enlaceBar"><img src="images/mapPin.png"><br>Mapa</div>
-          </div>            
-          <div class="col-md-2 imagencita">           
-            <div class="enlaceBar"><img src="images/fav.png"><br>Fav</div>
-          </div>
-          <div class="col-md-2 imagencita">                
-            <div class="enlaceBar"><img src="images/info_black.png"><br>Info</div>
-          </div>   
-          <div class="col-md-2 col-md-offset-2"><img src="images/birra_fondo_negro.gif" class="barInteractivo"><br>0 amigos</div>
-          <div class="col-md-2"><img src="images/birra_fondo_negro.gif" class="barInteractivo"><br>Vacío</div>
-        
-        </div>
-      </div>
-    </div>
+      <li ng-repeat="abar in ctrl.barList">
+        <barlistitem barName="{{abar.name}}" barAddress="{{abar.address}}" barTipo="{{abar.tipo}}" barTematica="{{abar.tematica}}"></barlistitem>
       </li>
     </ul>
-    <div bar>
-      <h3>Bar photo</h3>
-      <div>PhotoUrl : {{ctrl.currentBar.imgURL}}</div>
-  
-      <h3>Bar details</h3>
-      <div>Name: {{ctrl.barName}}</div>
-      <div>Direccion: {{ctrl.currentBar.address}}</div>
-      <div>Rating: {{ctrl.currentBar.zona}}</div>
-    </div>
 
     <script src="packages/shadow_dom/shadow_dom.min.js"></script>
     <script type="application/dart" src="lookingforbirra.dart"></script>
