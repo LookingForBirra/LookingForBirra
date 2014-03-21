@@ -16,10 +16,10 @@ class BarListItemComponent{
   @NgAttr('baraddress')
   String barAddress;
   
-  @NgAttr('barTipo')
+  @NgAttr('bartipo')
   String barTipo;
   
-  @NgAttr('barTematica')
+  @NgAttr('bartematica')
   String barTematica;
   
   BarListItemComponent();
